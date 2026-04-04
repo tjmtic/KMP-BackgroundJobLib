@@ -20,7 +20,8 @@ class AndroidBackgroundManager(private val context: Context) {
             .setRequiredNetworkType(NetworkType.CONNECTED)
             .build()
 
-        val workRequest = PeriodicWorkRequestBuilder<T>(
+        val workRequest = androidx.work.PeriodicWorkRequest.Builder(
+            workerClass,
             repeatIntervalInMinutes, TimeUnit.MINUTES
         )
             .setConstraints(constraints)

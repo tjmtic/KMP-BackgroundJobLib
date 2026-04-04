@@ -20,9 +20,13 @@ kotlin {
     iosArm64()
     iosSimulatorArm64()
     
+    watchosArm32()
+    watchosArm64()
+    watchosSimulatorArm64()
+    
     sourceSets {
         commonMain.dependencies {
-            implementation(libs.kotlinx.coroutines.core)
+            implementation(libs.coroutines.core)
         }
         
         androidMain.dependencies {
